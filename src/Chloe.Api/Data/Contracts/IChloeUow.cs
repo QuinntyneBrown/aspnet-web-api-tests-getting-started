@@ -4,7 +4,7 @@ namespace Chloe.Api.Data.Contracts
 {
     public interface IChloeUow
     {
-        IRepository<Employee> Users { get; }
+        IRepository<Employee> Employees { get; }
 
         void SaveChanges();
     }

@@ -1,4 +1,7 @@
-﻿using Chloe.Api.Data.Contracts;
+﻿using System;
+using System.Collections.Generic;
+using Chloe.Api.Data.Contracts;
+using Chloe.Api.Dtos;
 using Chloe.Api.Services.Contracts;
 
 namespace Chloe.Api.Services
@@ -11,5 +14,15 @@ namespace Chloe.Api.Services
         }
 
         protected readonly IChloeUow uow;
+
+        public ICollection<EmployeeDto> Get()
+        {
+            var result = new List<EmployeeDto>();
+            foreach(var employee in uow.Employees.GetAll())
+            {
+                result.Add(new EmployeeDto(employee));
+            }
+            return result;
+        }
     }
 }

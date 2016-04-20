@@ -3,6 +3,7 @@ using System.Web.Http;
 
 namespace Chloe.Api.Controllers
 {
+    [RoutePrefix("api/employee")]
     public class EmployeeController : ApiController
     {
         public EmployeeController(IEmployeeService employeeService)
@@ -10,15 +11,11 @@ namespace Chloe.Api.Controllers
             this.employeeService = employeeService;
         }
 
-        public EmployeeController()
-        {
-
-        }
-
         [HttpGet]
+        [Route("get")]
         public IHttpActionResult Get()
         {
-            return Ok();
+            return Ok(this.employeeService.Get());
         }
 
         protected readonly IEmployeeService employeeService;
