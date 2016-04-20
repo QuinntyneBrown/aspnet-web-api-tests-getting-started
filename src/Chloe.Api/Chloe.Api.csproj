@@ -135,6 +135,8 @@
     <Compile Include="ApiConfiguration.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Contracts\IEmployeeService.cs" />
+    <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="UnityConfiguration.cs" />
   </ItemGroup>

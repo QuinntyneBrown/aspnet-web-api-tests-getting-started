@@ -2,7 +2,7 @@
 using Chloe.Api.Controllers;
 using System.Web.Http.Results;
 
-namespace Chloe.Api.Tests
+namespace Chloe.Api.Tests.Controllers
 {
     [TestClass]
     public class TestEmployeeController
