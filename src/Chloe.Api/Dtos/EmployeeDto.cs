@@ -10,6 +10,11 @@ namespace Chloe.Api.Dtos
             this.LastName = employee.LastName;
         }
 
+        public EmployeeDto()
+        {
+
+        }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
     }
